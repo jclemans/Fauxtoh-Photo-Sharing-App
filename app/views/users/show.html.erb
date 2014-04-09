@@ -1,9 +1,9 @@
 <h1><%= current_user.email %> Profile Page</h1>
 
+<%= link_to "Upload Photo", new_photo_path, :class => "btn btn-primary" %>
+
 <p>Badass Honeybadger</p>
 <%= image_tag current_user.avatar.url %>
-
-<%= link_to "Upload Photo", new_photo_path, :class => "btn btn-primary" %>
 
 <% current_user.photos.each do |photo| %>
   <%= image_tag photo.photo %><br>

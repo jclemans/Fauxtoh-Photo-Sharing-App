@@ -1,0 +1,15 @@
+<h1>Photo Details</h1>
+
+<p>Use the drop down menu to tag a user in this photo!</p>
+
+<%= image_tag @photo.photo.url %>
+
+<%= form_for @tag, :url => tags_path, :html => { :multipart => true }  do |f| %>
+  <%= f.hidden_field :photo_id, :value => @photo.id %>
+  <%= select("tag", "user_id", @users.collect { |user| [user.email, user.id] }) %>
+  <%= f.submit 'Add Tag', :class => 'btn btn-primary' %>
+<% end %>
+
+
+<%= link_to "Home Page", root_path %>
+

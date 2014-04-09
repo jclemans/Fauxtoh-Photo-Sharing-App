@@ -1,3 +1,9 @@
 <h1>Fauxtoh Homepage</h1>
 
+<p>Behold, the photos!</p>
 
+<% @users.each do |user| %>
+  <% user.photos.reverse_each do |photo| %>
+    <%= link_to image_tag(photo.photo), photo_path(photo.id) %><br>
+  <% end %>
+<% end %>
