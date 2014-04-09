@@ -9,8 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap'
 gem 'factory_girl_rails'
-gem 'bcrypt-ruby', "~> 3.0.1"
-gem 'protected_attributes'
+gem 'bcrypt'
 
 group :development do
   gem 'better_errors'
