@@ -1,0 +1,20 @@
+<h1>Upload a New Fauxtoh</h1>
+
+<% if @photo.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @photo.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @photo, :url => photos_path, :html => { :multipart => true } do |f| %>
+  <div class="form-group">
+    <% f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.file_field :photo %>
+  </div>
+  <%= f.submit 'Submit', :class => 'btn btn-primary' %>
+<% end %>
+
+<a href="/">Back to Home</a>
