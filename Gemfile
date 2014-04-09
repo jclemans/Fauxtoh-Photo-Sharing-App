@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+gem 'rails', '~> 4.0.4'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap'
 gem 'factory_girl_rails'
+gem 'bcrypt-ruby', "~> 3.0.1"
+gem 'protected_attributes'
 
 group :development do
   gem 'better_errors'
