@@ -2,7 +2,7 @@
 
 Goal: Create a app that lets users upload and share photos
 
-* Let users create accounts
+* ** DONE **  Let users create accounts
 
 * Let users upload photos using Paperclip gem
 
