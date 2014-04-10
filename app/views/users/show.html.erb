@@ -2,7 +2,7 @@
 
 <%= link_to "Upload Photo", new_photo_path, :class => "btn btn-primary" %>
 
-<p>Badass Honeybadger</p>
+<p>My Pics</p>
 <%= image_tag current_user.avatar.url %>
 
 <% current_user.photos.each do |photo| %>

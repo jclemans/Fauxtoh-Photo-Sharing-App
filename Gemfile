@@ -11,6 +11,7 @@ gem 'bootstrap'
 gem 'factory_girl_rails'
 gem 'bcrypt'
 gem 'paperclip', "~> 4.1"
+gem 'launchy'
 
 group :development do
   gem 'better_errors'
@@ -27,4 +28,5 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'pry'
+  gem 'database_cleaner'
 end
