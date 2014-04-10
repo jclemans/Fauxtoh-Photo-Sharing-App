@@ -2,6 +2,8 @@
 
 <p>Behold, the photos!</p>
 
+<div class="container">
 <% @photos.each do |pic| %>
-  <%= link_to image_tag(pic.photo), photo_path(pic.id) %><br>
+  <%= link_to image_tag(pic.photo(:medium)), photo_path(pic.id) %>
 <% end %>
+</div>

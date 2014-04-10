@@ -19,10 +19,9 @@ Tasks Done
 
 * Update CSS/HTML to include a nav bar and improve layout. Use Bootstrap.
 
+* Let users "favorite" photos. On their profile page, include a list of all the photos they've favorited.
 
 Tasks to do
 ------------
-
-* Let users "favorite" photos. On their profile page, include a list of all the photos they've favorited.
 
 * Finally, add a recommendation engine to users' profile page: based on the photos they've favorited and been tagged in, suggest other users for them to check out.

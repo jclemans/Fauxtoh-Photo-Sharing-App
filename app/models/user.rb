@@ -11,6 +11,22 @@ class User < ActiveRecord::Base
   has_many :favorites
   has_many :tags
 
+  def recommendations
+    my_faves = []
+    similar_users = []
 
+    self.favorites.find(:all, :conditions => {:user_id => self.id}).each do |favorite|
+      my_faves << favorite.photo_id
+    end
+
+    my_faves.each do |id|
+      similar_users << Favorite.where(photo_id: id).pluck(:user_id)
+    end
+
+    similar_users.flatten!
+    similar_users.delete(self.id)
+    result = similar_users.inject(Hash.new(0)) { |hash, item| hash[item] += 1; hash }
+    Hash[result.sort_by{ |k,v| -v }]
+  end
 
 end

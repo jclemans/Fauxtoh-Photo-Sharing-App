@@ -5,12 +5,24 @@
 <h3>My Pics</h3>
 
 <% current_user.photos.each do |image| %>
-  <%= image_tag image.photo %><br>
+  <%= image_tag image.photo(:medium) %>
 <% end %>
 
 <h3>Pics I'm Tagged In</h3>
   <% current_user.tags.each do |tag| %>
     <% pic = Photo.find(tag.photo_id) %>
-    <%= image_tag pic.photo %>
+    <%= image_tag pic.photo(:medium) %>
   <% end %>
 
+<h3>My Favorites</h3>
+  <% current_user.favorites.each do |fav| %>
+    <% pic = Photo.find(fav.photo_id) %>
+    <%= image_tag pic.photo(:medium) %>
+  <% end %>
+
+<h3>Recommended Users</h3>
+  <% if current_user.recommendations != nil %>
+    <% current_user.recommendations.each do |key, value| %>
+      <%= User.find(key).email %>
+    <% end %>
+  <% end %>
