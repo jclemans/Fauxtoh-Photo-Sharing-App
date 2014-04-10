@@ -15,6 +15,8 @@ Tasks Done
 
 * Add Capybara integration tests
 
+* Update user show page so it lists out all of the photos they're tagged in
+
 
 Tasks to do
 ------------
@@ -22,8 +24,6 @@ Tasks to do
 * Update CSS/HTML to include a nav bar and improve layout. Use Bootstrap.
 
 * Update photo name conventions to photos > image
-
-* Update user show page so it lists out all of the photos they're tagged in
 
 * Let users "favorite" photos. On their profile page, include a list of all the photos they've favorited.
 

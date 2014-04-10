@@ -2,9 +2,15 @@
 
 <%= link_to "Upload Photo", new_photo_path, :class => "btn btn-primary" %>
 
-<p>My Pics</p>
-<%= image_tag current_user.avatar.url %>
+<h3>My Pics</h3>
 
-<% current_user.photos.each do |photo| %>
-  <%= image_tag photo.photo %><br>
+<% current_user.photos.each do |image| %>
+  <%= image_tag image.photo %><br>
 <% end %>
+
+<h3>Pics I'm Tagged In</h3>
+  <% current_user.tags.each do |tag| %>
+    <% pic = Photo.find(tag.photo_id) %>
+    <%= image_tag pic.photo %>
+  <% end %>
+
