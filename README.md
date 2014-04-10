@@ -13,9 +13,11 @@ Tasks Done
 
 * Let users tag other users in photos
 
+* Add Capybara integration tests
+
+
 Tasks to do
 ------------
-* Add Capybara integration tests
 
 * Update CSS/HTML to include a nav bar and improve layout. Use Bootstrap.
 
