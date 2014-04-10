@@ -5,5 +5,6 @@ class Photo < ActiveRecord::Base
   has_many :tags
   belongs_to :user
   has_many :users, through: :tags
+  has_many :favorites
 
 end

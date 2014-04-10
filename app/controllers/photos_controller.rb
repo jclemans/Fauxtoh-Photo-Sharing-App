@@ -19,6 +19,7 @@ class PhotosController < ApplicationController
 
   def show
     @tag = Tag.new
+    @favorite = Favorite.new
     @users = User.all
     @photo = Photo.find(params[:id])
   end
