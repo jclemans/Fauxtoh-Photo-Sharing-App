@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'factory_girl_rails'
 gem 'bcrypt'
-gem 'paperclip', "~> 4.1"
+gem 'paperclip', "~> 4.3"
 gem 'launchy'
 
 group :development do
